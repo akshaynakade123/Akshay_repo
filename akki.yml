@@ -1,6 +1,6 @@
 - name: Playbook1
   hosts: localhost
-  vars_files: files.yml
+  #vars_files: files.yml
   vars:
     URL: global.clouditz.com
   tasks:
