@@ -1,6 +1,6 @@
 - name: Playbook1
   hosts: all
-  vars_file: akki2.yml
+  vars :
     URL: cloudblitz.in
   tasks: 
   - name: Print message_1
