@@ -7,6 +7,6 @@
   - name: print message_1
     debug:
      msg: "{{URL}}"
-  # vars:
-  #  URL: "hello bhai"
+  vars:
+    URL: hello bhai
  
