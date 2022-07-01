@@ -1,7 +1,7 @@
 - name: Playbook1
   hosts: all
-  vars_files: files.yml
-   #URL: global.clouditz.com
+ # vars_files: files.yml
+  # URL: global.clouditz.com
   tasks:
   - name: print message_1
     debug:
