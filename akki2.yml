@@ -1,5 +1,5 @@
 - name: playbook3
-  hosts:
+  hosts: all
   tasks:
    - name: print the host details
      debug:
