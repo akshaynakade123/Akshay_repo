@@ -2,7 +2,7 @@
   hosts: localhost
   vars:
     URL: global.clouditz.com
-  vars_files: files.yml
+  #vars_files: files.yml
   tasks:
   - name: print message_1
     debug:
