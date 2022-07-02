@@ -1,5 +1,5 @@
 - name: Playbook1
-  hosts: localhost
+  hosts: Hostsall
   # vars:
   #   URL: global.clouditz.com
   tasks:
