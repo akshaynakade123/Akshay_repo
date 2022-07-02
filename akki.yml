@@ -3,9 +3,9 @@
   # vars:
   #   URL: global.clouditz.com
   tasks:
-   - name: print message_1
-     debug:
-      msg: "{{URL}}"
+  - name: print message_1
+    debug:
+     msg: "{{URL}}"
   # vars_files: files.yml
   # tasks:
   # - name: print message_1
