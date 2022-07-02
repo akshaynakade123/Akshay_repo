@@ -3,4 +3,4 @@
   tasks:
    - name: print the host details
      debug:
-      msg: "domain name of ansible: {{ansible_os_family}}"
+      msg: "domain name of ansible: {{ansible_env.HOME}}"
