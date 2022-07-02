@@ -1,0 +1,9 @@
+- name: playbook2
+  hosts: all
+  vars_prompt:
+  - name: URL
+    prompt: "ENTER URL"
+  tasks:
+  - name: print messages_1
+    debug:
+     msg: "{{URL}}"

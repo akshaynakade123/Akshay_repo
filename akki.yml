@@ -3,7 +3,7 @@
   # vars:
   #   URL: global.clouditz.com
   tasks:
-  - shell: ps >> hostname.txt
+ # - shell: ps >> hostname.txt
   - name: print message_1
     debug:
      msg: "{{ansible_distribution}}"
