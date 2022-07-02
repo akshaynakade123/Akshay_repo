@@ -1,10 +1,6 @@
-- name: playbook2
-  hosts: all
-  vars_prompt:
-  - name: URL
-    prompt: "ENTER URL"
-    private: false
+- name: playbook3
+  hosts:
   tasks:
-  - name: print messages_1
-    debug:
-     msg: "{{URL}}"
+   - name: print the host details
+     debug:
+      msg: "domain name of ansible: {{ansible_os_family}}"
