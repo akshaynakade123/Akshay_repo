@@ -6,7 +6,7 @@
   - shell: ps >> hostname.txt
   - name: print message_1
     debug:
-     msg: "{{URL}}"
+     msg: "{{ansible_distribution}}"
   # vars_files: files.yml
   # tasks:
   # - name: print message_1
