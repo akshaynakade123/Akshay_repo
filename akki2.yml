@@ -1,6 +1,21 @@
-- name: playbook3
+- name: Playbook1
   hosts: all
-  tasks:
-   - name: print the host details
-     debug:
-      msg: "domain name of ansible: {{ansible_env.HOME}}"
+
+  tasks: 
+
+  - name: installation of service
+    become: true
+    apt: 
+     name: ftp 
+     state: latest 
+    tags: ftp_sevice
+
+  - name: print ansible user 
+    debug:
+      msg: "ansible user: {{ansible_lsb.codename}}"
+    tags: only_print
+
+  - name: print ansible user 
+    debug:
+      msg: "ansible user: {{ansible_lsb.codename}}"
+    tags: only_two
