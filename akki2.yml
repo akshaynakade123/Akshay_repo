@@ -12,11 +12,16 @@
 
   - name: print ansible user 
     debug:
-      msg: "ansible user: {{ansible_lsb.codename}}"
+      msg: "product  version name of ansible: {{ansible_product_version}}"
+    when: ansible_product_version == "abc" and ansible_distribution == 'dgg' 
     tags: only_print 
     
   - name: print ansible user 
     debug:
-      msg: "ansible user: {{ansible_lsb.codename}}"
+      msg: "distribution name of ansible : {{ansible_distribution}}"
     tags: only_two
-    when: ansible_lsb.codename == "abc" and ansible_lsb.codename == 'dgg' 
+   
+
+  - name: print ansible user 
+    debug:
+      msg: "ansible os name: {{ansible_os_family}}"
