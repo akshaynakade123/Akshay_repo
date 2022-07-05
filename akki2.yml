@@ -13,11 +13,10 @@
   - name: print ansible user 
     debug:
       msg: "ansible user: {{ansible_lsb.codename}}"
-    when: ansible_lsb.codename == "abc"
     tags: only_print 
     
   - name: print ansible user 
     debug:
       msg: "ansible user: {{ansible_lsb.codename}}"
     tags: only_two
-    
+    when: ansible_lsb.codename == "abc" and ansible_lsb.codename == 'dgg' 
