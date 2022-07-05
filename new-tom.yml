@@ -9,7 +9,7 @@
       name: openjdk-11-jre-headless
 
   - name: download tomcat server packages
-    wget:
+    get_url:
       url: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz
       dest: /usr/local
 
