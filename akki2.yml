@@ -3,12 +3,12 @@
 
   tasks: 
 
-  - name: installation of service
-    become: true
-    apt: 
-     name: ftp 
-     state: latest 
-    tags: ftp_sevice
+  # - name: installation of service
+  #   become: true
+  #   apt: 
+  #    name: ftp 
+  #    state: latest 
+  #   tags: ftp_sevice
 
   - name: print ansible user 
     debug:
@@ -19,3 +19,4 @@
     debug:
       msg: "ansible user: {{ansible_lsb.codename}}"
     tags: only_two
+    
