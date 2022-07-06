@@ -1,0 +1,6 @@
+- name: playbook file
+  hosts: all
+  tasks:
+   - name: copy file
+     copy: akk2.yml
+     dest: /mnt/bhongade.txt
