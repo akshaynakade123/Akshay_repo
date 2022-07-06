@@ -2,6 +2,6 @@
   hosts: all
   become: true
   tasks:
-   - name: copy file
-     copy: akk2.yml
+   #- name: copy file
+   - copy: akk2.yml
      dest: /mnt/bhongade.txt
