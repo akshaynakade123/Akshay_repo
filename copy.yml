@@ -3,6 +3,6 @@
   become: true
   tasks:
    - name: copy file
-     copy: file
+     copy:
      src: akki2.yml
      dest: /mnt/bhongade.txt
