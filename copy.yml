@@ -1,5 +1,6 @@
 - name: playbook file
   hosts: all
+  become: true
   tasks:
    - name: copy file
      copy: akk2.yml
