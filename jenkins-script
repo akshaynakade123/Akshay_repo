@@ -1,0 +1,20 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo 'hello everyone'
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh 'touch file_1' 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                git credentialsId: '6325a065-4004-4a5d-b618-f1d044d20d46', url: 'https://github.com/akshaynakade123/Akshay_repo.git'
+            }
+        }
+    }
+}
