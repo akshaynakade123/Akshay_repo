@@ -8,6 +8,6 @@ node {
         sh 'touch vaibhav.txt' 
     }
     stage('Deploy') { 
-        sh 'mkdir komal'
+        sh 'mkdir koma'
     }
 }
