@@ -5,7 +5,7 @@ node {
         echo 'hello everyone' 
     }
     stage('Test') { 
-        sh 'touch vaibhav.txt' 
+        sh 'touch vaibhu.txt' 
     }
     stage('Deploy') { 
         sh 'mkdir koma'
