@@ -1,27 +1,26 @@
-- name: Playbook1
-  hosts: all
+- name: 
+  package:
+   name: openjdk-8-jre-headless 
+   state: present
 
-  tasks: 
+- name: download web-application
+  get_url:
+    url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.81/bin/apache-tomcat-8.5.81.tar.gz
+    dest: /mnt
 
-  # - name: installation of service
-  #   become: true
-  #   apt: 
-  #    name: ftp 
-  #    state: latest 
-  #   tags: ftp_sevice
 
-  - name: print ansible user 
-    debug:
-      msg: "product  version name of ansible: {{ansible_product_version}}"
-    when: ansible_product_version == "abc" and ansible_distribution == 'dgg' 
-    tags: only_print 
+
+- name: extracting zip file 
+  command: tar -xzf /mnt/apache-tomcat-8.5.81.tar.gz -C /mnt
     
-  - name: print ansible user 
-    debug:
-      msg: "distribution name of ansible : {{ansible_distribution}}"
-    tags: only_two
-   
+- name:
+  copy: 
+  src: /home/ubuntu/student.war
+  dest: /mnt/apache-tomcat-8.5.81/studentapp
 
-  - name: print ansible user 
-    debug:
-      msg: "ansible os name: {{ansible_os_family}}"
+
+- name: start and enableing tomcat 
+  command: /mnt/apache-tomcat-8.5.81/bin/catalina.sh start
+   
+    
+          
